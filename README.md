@@ -25,6 +25,13 @@
         - 在 `idx-1` 的位置插入新 element
     - 不成立的話刪除 `intervals` 中由 `idx` 算起的 `remove_cnt` 個 element，並在 `idx` 的位置插入新 element
 
+### 413. Arithmetic Slices
+
+1. 由最後三個 element 開始，判斷前兩項的差值是否等於後兩項的差值
+    - 成立的話則紀錄以第一項的索引為首，連續三個 element 為等差數列，數量為 1
+        - 查詢以第二項的索引為首時，是否亦有等差數列，成立的話更新以第一項的索引為首的等差數列的數量
+2. 累加以每個 element 為首時的等差數列的數量
+
 ### 446. Arithmetic Slices II - Subsequence
 
 1. 以 DP 的方式規劃，先記錄數列 `nums` 中的任意兩值，`nums[i]` 及 `nums[j]`，是否存在第三值 `nums[k]`，使其成為等差子數列，其中 `k>j>i`

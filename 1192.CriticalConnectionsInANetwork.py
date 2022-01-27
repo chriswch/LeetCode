@@ -6,6 +6,8 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         node_edge = {}
+        for i in range(n):
+            node_edge[i] = []
         for pair in connections:
             node_edge[pair[0]].append(pair[1])
             node_edge[pair[1]].append(pair[0])

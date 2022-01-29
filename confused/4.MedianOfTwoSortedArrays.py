@@ -16,7 +16,7 @@ class Solution(object):
         nums1_right = nums1_len
 
         while nums1_left < nums1_right:
-            nums1_halfLen = nums1_left + (nums1_right - nums1_left) // 2
+            nums1_halfLen = (nums1_left + nums1_right) // 2
             nums2_halfLen = merged_halfLen - nums1_halfLen
             if nums1[nums1_halfLen] < nums2[nums2_halfLen - 1]:
                 nums1_left = nums1_halfLen + 1
@@ -26,19 +26,19 @@ class Solution(object):
         nums1_half = nums1_left
         nums2_half = merged_halfLen - nums1_half
         median = max(
-            float("-inf") if nums1_half <= 0 else nums1[nums1_half - 1],
-            float("-inf") if nums2_half <= 0 else nums2[nums2_half - 1],
+            float("-inf") if nums1_half == 0 else nums1[nums1_half - 1],
+            float("-inf") if nums2_half == 0 else nums2[nums2_half - 1],
         )
 
         if (nums1_len + nums2_len) % 2 == 1:
             return median
 
         median2 = min(
-            float("inf") if nums1_half >= nums1_len else nums1[nums1_half],
-            float("inf") if nums2_half >= nums2_len else nums2[nums2_half],
+            float("inf") if nums1_half == nums1_len else nums1[nums1_half],
+            float("inf") if nums2_half == nums2_len else nums2[nums2_half],
         )
 
-        return (median + median2) / 2
+        return float(median + median2) / 2
 
 
 if __name__ == "__main__":

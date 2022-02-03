@@ -57,25 +57,25 @@ class Solution(object):
 if __name__ == "__main__":
     obj = Solution()
 
-    # s = "aa"
-    # p = "a"
-    # print(obj.isMatch(s, p))  # False
+    s = "aa"
+    p = "a"
+    print(obj.isMatch(s, p))  # False
 
-    # s = "aa"
-    # p = "a*"
-    # print(obj.isMatch(s, p))  # True
+    s = "aa"
+    p = "a*"
+    print(obj.isMatch(s, p))  # True
 
-    # s = "ab"
-    # p = ".*"
-    # print(obj.isMatch(s, p))  # True
+    s = "ab"
+    p = ".*"
+    print(obj.isMatch(s, p))  # True
 
-    # s = "aab"
-    # p = "c*a*b"
-    # print(obj.isMatch(s, p))  # True
+    s = "aab"
+    p = "c*a*b"
+    print(obj.isMatch(s, p))  # True
 
-    # s = "aaaaaaaaaaaaab"
-    # p = "a*a*a*a*a*a*a*a*a*a*a*a*b"
-    # print(obj.isMatch(s, p))  # True
+    s = "aaaaaaaaaaaaab"
+    p = "a*a*a*a*a*a*a*a*a*a*a*a*b"
+    print(obj.isMatch(s, p))  # True
 
     s = "aasdfasdfasdfasdfas"
     p = "aasdf.*asdf.*asdf.*asdf.*s"

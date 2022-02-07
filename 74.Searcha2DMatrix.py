@@ -1,6 +1,3 @@
-from numpy import mat
-
-
 class Solution(object):
     def searchMatrix(self, matrix, target):
         """

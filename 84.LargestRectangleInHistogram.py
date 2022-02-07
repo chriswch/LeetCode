@@ -46,3 +46,6 @@ if __name__ == "__main__":
 
     heights = [2, 4]
     print(obj.largestRectangleArea(heights))  # 4
+
+    heights = [3, 2, 2, 2, 2, 2, 4]
+    print(obj.largestRectangleArea(heights))  # 14

@@ -35,9 +35,11 @@ class Solution(object):
             right_max = max(right_max, height[h_idx])
             min_height = min(left_max[h_idx], right_max)
 
-            trap = min_height - height[h_idx]
-            if trap > 0:
-                result += trap
+            # trap = min_height - height[h_idx]
+            # if trap > 0:
+            #     result += trap
+            if min_height > height[h_idx]:
+                result += min_height - height[h_idx]
 
         return result
 

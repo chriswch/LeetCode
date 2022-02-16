@@ -11,7 +11,6 @@ class Solution(object):
         :type lists: List[ListNode]
         :rtype: ListNode
         """
-        value = []
         value_nodes = {}
         for node in lists:
             curr = node
@@ -19,14 +18,12 @@ class Solution(object):
                 if curr.val in value_nodes:
                     value_nodes[curr.val].append(curr)
                 else:
-                    value.append(curr.val)
                     value_nodes[curr.val] = [curr]
                 curr = curr.next
 
-        value.sort()
         root = ListNode()
         curr = root
-        for val in value:
+        for val in sorted(value_nodes.keys()):
             for node in value_nodes[val]:
                 curr.next = node
                 curr = curr.next
